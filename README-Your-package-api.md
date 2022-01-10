@@ -19,6 +19,18 @@
 
 **Case 6 member subscription หมดอายุ และ Promotion code หมดอายุ  `(ไม่มี member subscription)`** `supagorn.pi+2206@gmail.com `
 
+## Header
+|  | EN | Current Package | Current Package (Redeem Code) | Expire date | Next billing date | RENEW SUBSCRIPTION | Cancel membership |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Email | TH | แพ็กเกจปัจจุบัน | แพ็กเกจปัจจุบัน (ใช้รหัสโปรโมท)   | วันหมดอายุ | รอบบิลถัดไป | ต่ออายุสมาชิก | ยกเลิกการเป็นสมาชิก |
+| `case1: supagorn.pi+2201@gmail.com ` | | |  ✅  | ✅ |  | ✅  |  | 
+| `case2: supagorn.pi+2202@gmail.com ` | | ✅ | | | ✅ |  | ✅ |
+| `case3: supagorn.pi+2203@gmail.com ` | | ✅ | | | ✅ |  | ✅ |
+| `case4: supagorn.pi+2204@gmail.com ` | | ✅ | | ✅ |  |  | ✅ |
+| `case5: supagorn.pi+2205@gmail.com ` | | |  ✅  | ✅ |  | ✅  |  | 
+| `case6: supagorn.pi+2206@gmail.com ` | | ✅ |    | ✅ |  | ✅  |  | 
+
+
 
 ### Case 1 มี Promotion code
 > **Email:** `supagorn.pi+2201@gmail.com `
