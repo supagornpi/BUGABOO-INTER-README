@@ -5,12 +5,12 @@
 **Header:** x-token
 > **Password:** `123456789`
 
-### Case 1 มี Promotion code
-### Case 2 มี Member subscription
-### Case 3 Promotion code หมดอายุ แต่มี Member subscription
-### Case 4  Member subscription ถูกยกเลิก
-### Case 5 member subscription หมดอายุแล้ว และมี Promotion code
-### Case 6 member subscription หมดอายุ และ Promotion code หมดอายุ  `(ไม่มี member subscription)`
+##### Case 1 มี Promotion code
+##### Case 2 มี Member subscription
+##### Case 3 Promotion code หมดอายุ แต่มี Member subscription
+##### Case 4  Member subscription ถูกยกเลิก
+##### Case 5 member subscription หมดอายุแล้ว และมี Promotion code
+##### Case 6 member subscription หมดอายุ และ Promotion code หมดอายุ  `(ไม่มี member subscription)`
 
 
 ### Case 1 มี Promotion code
