@@ -1,16 +1,23 @@
 # Your Package Api
 
-**Api** `member/subscriptions/package ` **Method:** GET
-**Authorization:** Basic
-**Header:** x-token
+**Api** `member/subscriptions/package `     
+**Method:** GET     
+**Authorization:** Basic    
+**Header:** x-token 
 > **Password:** `123456789`
 
-##### Case 1 มี Promotion code
-##### Case 2 มี Member subscription
-##### Case 3 Promotion code หมดอายุ แต่มี Member subscription
-##### Case 4  Member subscription ถูกยกเลิก
-##### Case 5 member subscription หมดอายุแล้ว และมี Promotion code
-##### Case 6 member subscription หมดอายุ และ Promotion code หมดอายุ  `(ไม่มี member subscription)`
+
+**Case 1 มี Promotion code** `supagorn.pi+2201@gmail.com `
+
+**Case 2 มี Member subscription** `supagorn.pi+2202@gmail.com `
+
+**Case 3 Promotion code หมดอายุ แต่มี Member subscription** `supagorn.pi+2203@gmail.com `
+
+**Case 4  Member subscription ถูกยกเลิก** `supagorn.pi+2204@gmail.com `
+
+**Case 5 member subscription หมดอายุแล้ว และมี Promotion code** `supagorn.pi+2205@gmail.com `
+
+**Case 6 member subscription หมดอายุ และ Promotion code หมดอายุ  `(ไม่มี member subscription)`** `supagorn.pi+2206@gmail.com `
 
 
 ### Case 1 มี Promotion code
@@ -84,9 +91,13 @@ response
 | 01 February 2022 | 01 กุมภาพันธ์ 256565 |
 | **Button:** Cancel membership  | **Button:** ยกเลิกการเป็นสมาชิก |
 
+> **การแสดงราคา** **gateway:** `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ
+
 > 📝 **Note:** สำหรับ Website จะมี Badge ด้านล่างนี้ต่อท้ายชื่อ Package
 **Example**
+
 > **TH:** 1 Month [Test] 199 THB / 1 เดือน ``` หมดอายุในอีก 22 วัน```
+
 > **EN:** 1 Month [Test] 199 THB / 1 Month ``` Remaining 22 days ```
 
 ### Case 3 Promotion code หมดอายุ แต่มี Member subscription
@@ -123,6 +134,8 @@ response
 | ``` Next billing date  ``` | ``` รอบบิลถัดไป ``` |
 | 01 February 2022 | 01 กุมภาพันธ์ 2565 |
 | **Button:** Cancel membership  | **Button:** ยกเลิกการเป็นสมาชิก |
+
+> **การแสดงราคา** **gateway:** `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ
 
 > 📝 **Note:** สำหรับ Website จะมี Badge ด้านล่างนี้ต่อท้ายชื่อ Package
 **Example**
@@ -167,11 +180,15 @@ response
 | **Button Website:** `ไม่แสดงปุ่ม (ตามของเดิม)`  | **Button Website:** `ไม่แสดงปุ่ม (ตามของเดิม)` |
 | **Button Mobile `(Disable)`:** Cancel membership  | **Button Mobile `(Disable)`:** ยกเลิกการเป็นสมาชิก |
 
+> **การแสดงราคา** **gateway:** `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ
+
 > **การเช็ค:** `Disable` เช็คจาก `enabled_recurring: false` && `has_subscription: true` [^Disable]
 
 > 📝 **Note:** สำหรับ Website จะมี Badge ด้านล่างนี้ต่อท้ายชื่อ Package
 **Example**
+
 > **TH:** 1 Month [Test] 199 THB / 1 เดือน ``` หมดอายุในอีก 22 วัน```
+
 > **EN:** 1 Month [Test] 199 THB / 1 Month ``` Remaining 22 days ```
 
 ### Case 5 member subscription หมดอายุแล้ว และมี Promotion code
