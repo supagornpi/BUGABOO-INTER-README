@@ -68,6 +68,7 @@ response
 | **Button Mobile `(Disable)`:** RENEW SUBSCRIPTION   | **Button Mobile `(Disable)`:** ต่ออายุสมาชิก |
 
 > **การเช็ค:** `Disable` เช็คจาก `enabled_recurring: false` && `has_subscription: true` [^Disable]
+> **Current Package (Redeem Code)** เช็คจาก `gateway: promocode`
 
 ### Case 2 มี Member subscription
 > **Email:**  `supagorn.pi+2202@gmail.com `
@@ -239,7 +240,7 @@ response
 | **Button Website `(Disable)`:** Buy package / Renew subscription   | **Button Website `(Disable)`:** สมัครแพ็กเกจ / ต่ออายุสมาชิก |
 | **Button Mobile `(Disable)`:** RENEW SUBSCRIPTION   | **Button Mobile `(Disable)`:** ต่ออายุสมาชิก |
 > **การเช็ค:** `Disable` เช็คจาก `enabled_recurring: false` && `has_subscription: true` [^Disable]
-
+> **Current Package (Redeem Code)** เช็คจาก `gateway: promocode`
 
 ### Case 6 member subscription หมดอายุ และ Promotion code หมดอายุ  `(ไม่มี member subscription)`
 > **Email:**  `supagorn.pi+2206@gmail.com `
