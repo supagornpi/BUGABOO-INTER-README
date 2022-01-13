@@ -20,7 +20,7 @@ If `has_subscription` == `true`
         subscription name = `subscription.name`     
     else        
         If `gateway` == `Apple` or `Google` or `Huawei`     
-            **subscription name** = `subscription.name` + `/` + `subscription.regular_duration`     
+            subscription name = `subscription.name` + `/` + `subscription.regular_duration`     
         else        
             subscription name = `subscription.name` + `subscription.price or subscription.price_thb` + `/` + `subscription.regular_duration`        
 else        
