@@ -36,7 +36,7 @@ If `enabled_recurring` == `true`
    Billing date Title = `Next billing date` | `รอบบิลถัดไป`
    
 Billing date
-If `eligible` == `true`
+If `eligible` == `true` && `expiry_date` != `null`
    Billing date = `expiry_date` format `07 February 2022 | 07 กุมภาพันธ์ 2565`
    
 
