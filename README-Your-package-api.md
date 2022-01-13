@@ -31,9 +31,15 @@ example
 `1 Month [Test] 5.99 USD / 1 Month` | `1 Month [Test] 199 THB / 1 เดือน`        
 
 
-Billing date = `Expire date` | `วันหมดอายุ`
+Billing date Title = `Expire date` | `วันหมดอายุ`
 If `enabled_recurring` == `true`
-   Billing date = `Next billing date` | `รอบบิลถัดไป`
+   Billing date Title = `Next billing date` | `รอบบิลถัดไป`
+   
+Billing date
+If `eligible` == `true`
+   Billing date = `expiry_date` format `07 February 2022 | 07 กุมภาพันธ์ 2565`
+   
+
    
 Button
 If (`eligible` == `true` || `enabled_recurring` == `true`) && !(`gateway` == `promocode`)
