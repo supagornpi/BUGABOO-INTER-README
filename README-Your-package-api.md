@@ -5,27 +5,28 @@
 **Authorization:** Basic    
 **Header:** x-token 
 
-##Guild
-**Title** = `Current Package` | `แพ็กเกจปัจจุบัน`
-If `gateway` == `promocode`
-    Title = `Current Package (Redeem Code)` | `แพ็กเกจปัจจุบัน (ใช้รหัสโปรโมท)`
+##Guild     
+**Title** = `Current Package` | `แพ็กเกจปัจจุบัน`       
+If `gateway` == `promocode`     
+    Title = `Current Package (Redeem Code)` | `แพ็กเกจปัจจุบัน (ใช้รหัสโปรโมท)`     
     
-**Subscription name**
-> **การแสดงราคา** **gateway:** `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ
-If `has_subscription` == `true`
-    If `gateway` == `promocode`
-        **subscription name** = `subscription.name`
-    else
-        If `gateway` == `Apple` or `Google` or `Huawei`
-            **subscription name** = `subscription.name` + `/` + `subscription.regular_duration`
-        else
-            **subscription name** = `subscription.name` + `subscription.price or subscription.price_thb` + `/` + `subscription.regular_duration`
-else
-    **subscription name** = `-`
+**Subscription name**       
+> **การแสดงราคา** **gateway:** `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ        
+
+If `has_subscription` == `true`     
+    If `gateway` == `promocode`     
+        **subscription name** = `subscription.name`     
+    else        
+        If `gateway` == `Apple` or `Google` or `Huawei`     
+            **subscription name** = `subscription.name` + `/` + `subscription.regular_duration`     
+        else        
+            **subscription name** = `subscription.name` + `subscription.price or subscription.price_thb` + `/` + `subscription.regular_duration`        
+else        
+    **subscription name** = `-`     
     
-**example**
-`1 Month [Test] / 1 Month` | `1 Month [Test] / 1 เดือน`
-`1 Month [Test] 5.99 USD / 1 Month` | `1 Month [Test] 199 THB / 1 เดือน`
+**example**     
+`1 Month [Test] / 1 Month` | `1 Month [Test] / 1 เดือน`     
+`1 Month [Test] 5.99 USD / 1 Month` | `1 Month [Test] 199 THB / 1 เดือน`        
 
 
 **Billing date** = `Expire date` | `วันหมดอายุ`
