@@ -5,42 +5,45 @@
 **Authorization:** Basic    
 **Header:** x-token 
 
-##Guild     
-**Title** = `Current Package` | `แพ็กเกจปัจจุบัน`       
+## Guild     
+
+``` 
+Title = `Current Package` | `แพ็กเกจปัจจุบัน`       
 If `gateway` == `promocode`     
     Title = `Current Package (Redeem Code)` | `แพ็กเกจปัจจุบัน (ใช้รหัสโปรโมท)`     
     
-**Subscription name**       
-> **การแสดงราคา** **gateway:** `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ        
+Subscription name     
+> การแสดงราคา gateway: `Apple, Google, Huawei` ไม่ต้องแสดงราคา ส่วน gateway อื่นๆให้แสดงราคาปกติ (ราคาแยกตามภาษา)   
 
 If `has_subscription` == `true`     
     If `gateway` == `promocode`     
-        **subscription name** = `subscription.name`     
+        subscription name = `subscription.name`     
     else        
         If `gateway` == `Apple` or `Google` or `Huawei`     
             **subscription name** = `subscription.name` + `/` + `subscription.regular_duration`     
         else        
-            **subscription name** = `subscription.name` + `subscription.price or subscription.price_thb` + `/` + `subscription.regular_duration`        
+            subscription name = `subscription.name` + `subscription.price or subscription.price_thb` + `/` + `subscription.regular_duration`        
 else        
-    **subscription name** = `-`     
+    subscription name = `-`     
     
-**example**     
+example   
 `1 Month [Test] / 1 Month` | `1 Month [Test] / 1 เดือน`     
 `1 Month [Test] 5.99 USD / 1 Month` | `1 Month [Test] 199 THB / 1 เดือน`        
 
 
-**Billing date** = `Expire date` | `วันหมดอายุ`
+Billing date = `Expire date` | `วันหมดอายุ`
 If `enabled_recurring` == `true`
    Billing date = `Next billing date` | `รอบบิลถัดไป`
    
-**Button**
+Button
 If (`eligible` == `true` || `enabled_recurring` == `true`) && !(`gateway` == `promocode`)
-    **Button** = `Cancel membership`  | `ยกเลิกการเป็นสมาชิก`
+    Button = `Cancel membership`  | `ยกเลิกการเป็นสมาชิก`
 else
-    **Button** = **Mobile** -> `RENEW SUBSCRIPTION` | `ต่ออายุสมาชิก` , **Website** -> `Buy package / Renew subscription` | `สมัครแพ็กเกจ / ต่ออายุสมาชิก`
+    Button = Mobile -> `RENEW SUBSCRIPTION` | `ต่ออายุสมาชิก` , **Website** -> `Buy package / Renew subscription` | `สมัครแพ็กเกจ / ต่ออายุสมาชิก`
 
-**disable button (กดไม่ได้)** = (`enabled_recurring` == `false` && `has_subscription`)
+disable button (กดไม่ได้) = (`enabled_recurring` == `false` && `has_subscription`)
 
+```
 
 > **Password:** `123456789`
 
