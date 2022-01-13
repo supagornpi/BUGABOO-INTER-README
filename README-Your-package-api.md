@@ -41,7 +41,7 @@ If (`eligible` == `true` || `enabled_recurring` == `true`) && !(`gateway` == `pr
 else
     Button = Mobile -> `RENEW SUBSCRIPTION` | `ต่ออายุสมาชิก` , **Website** -> `Buy package / Renew subscription` | `สมัครแพ็กเกจ / ต่ออายุสมาชิก`
 
-disable button (กดไม่ได้) = (`enabled_recurring` == `false` && `has_subscription`)
+disable button (กดไม่ได้) = (`enabled_recurring` == `false` && `eligible`)
 
 ```
 
