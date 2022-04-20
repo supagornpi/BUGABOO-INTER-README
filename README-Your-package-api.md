@@ -5,7 +5,7 @@
 **Authorization:** Basic    
 **Header:** x-token 
 
-## Guild     
+## Guide     
 
 ``` 
 Title = `Current Package` | `แพ็กเกจปัจจุบัน`       
