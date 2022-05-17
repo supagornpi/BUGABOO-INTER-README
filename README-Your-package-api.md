@@ -41,13 +41,46 @@ If `eligible` == `true` && `expiry_date` != `null`
    
 
    
-Button
+Button (Old)
 If (`eligible` == `true` || `enabled_recurring` == `true`) && !(`gateway` == `promocode`)
     Button = `Cancel membership`  | `ยกเลิกการเป็นสมาชิก`
 else
     Button = Mobile -> `RENEW SUBSCRIPTION` | `ต่ออายุสมาชิก` , **Website** -> `Buy package / Renew subscription` | `สมัครแพ็กเกจ / ต่ออายุสมาชิก`
 
 disable button (กดไม่ได้) = (`enabled_recurring` == `false` && `eligible`)
+
+   
+Button (new (Updated at 17/05/65))
+If (`eligible` == `true` || `enabled_recurring` == `true`) && !(`gateway` == `promocode`)
+    Button = `Cancel membership`  | `ยกเลิกการเป็นสมาชิก`
+    
+    if (status == 9)
+        if (`gateway` == `Google`)
+            Action = show alert update your payment (Text below)
+            Positive button action = open 'https://play.google.com/store/account/subscriptions'
+            Negative button action = open plan
+        else if (`gateway` == `Apple`)
+            Action = show alert update your payment (Text below)
+            Positive button action = open 'https://apps.apple.com/account/subscriptions'
+            Negative button action = open plan
+    else
+        'ทำตามเงื่อนไขเดิม'
+            
+    
+else
+    Button = Mobile -> `RENEW SUBSCRIPTION` | `ต่ออายุสมาชิก` , **Website** -> `Buy package / Renew subscription` | `สมัครแพ็กเกจ / ต่ออายุสมาชิก`
+
+disable button (กดไม่ได้) = (`enabled_recurring` == `false` && `eligible`)
+
+
+Alert Update your payment
+Title EN: 'Update your payment information to continue watching'
+Title TH: 'อัปเดตข้อมูลการชำระเงินเพื่อรับชมต่อ'
+Positive Button EN: 'Update a payment method'
+Positive Button TH: 'อัปเดตการชำระเงิน'
+Negative Button EN: 'Change package'
+Negative Button TH: 'เปลี่ยนแพ็กเกจ'
+
 
 ```
 
